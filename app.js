@@ -63,6 +63,15 @@ function sortearAmigo() {
 
     resultado.innerHTML = `<li>O amigo secreto sorteado foi: <strong>${nomeSorteado}</strong> ${emoji}</li>`;
     mostrarMensagem("Sorteio realizado com sucesso! 🎉", "sucesso");
+
+    // Mostrar botão "Novo Sorteio"
+    document.getElementById("novoSorteio").style.display = "inline-block";
+}
+
+function novoSorteio() {
+    document.getElementById("resultado").innerHTML = "";
+    document.getElementById("novoSorteio").style.display = "none";
+    limparMensagem();
 }
 
 function mostrarMensagem(texto, tipo) {
